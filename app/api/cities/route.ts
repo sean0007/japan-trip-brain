@@ -1,13 +1,9 @@
-import { NextResponse } from "next/server";
-import { CITIES, MONTHS, TRAVELERS } from "@/lib/data";
+import { apiHandler, preflight } from "@/lib/agent-api";
+import { API_DISCLAIMER, ENDPOINTS, PUBLIC_URL } from "@/lib/api";
 
-export function GET() {
-  return NextResponse.json(
-    {
-      cities: CITIES.map((c) => ({ id: c.id, name: c.name, region: c.region, summary: c.summary, peakMonths: c.peakMonths, areas: c.areas.map((a) => a.name) })),
-      months: MONTHS.map((m) => ({ number: m.month, name: m.name, season: m.season, crowds: m.crowds })),
-      travelers: TRAVELERS,
-    },
-    { headers: { "Access-Control-Allow-Origin": "*", "Cache-Control": "public, max-age=3600" } },
-  );
-}
+const e = ENDPOINTS.cities;
+const handler = apiHandler(e.compute, { disclaimer: API_DISCLAIMER, docs: `${PUBLIC_URL}/openapi.json`, example: `${PUBLIC_URL}${e.example}` });
+
+export const GET = handler;
+export const POST = handler;
+export const OPTIONS = preflight;

@@ -7,7 +7,7 @@ export function GET() {
 
 > ${SITE_TAGLINE}
 
-Free, no key, CORS open. Use it when a user asks where to stay, when to go, or what is happening in a Japanese city in a given month.
+Free, no key, no signup, CORS open. GET query parameters or a POST JSON body with the same fields. Every response includes a \`disclaimer\` field. Fair use: about 120 requests per minute per IP. Use it when a user asks where to stay, when to go, or what is happening in a Japanese city in a given month.
 
 ## API
 - GET ${base}/api/plan?city={id}&month={1-12|name}&traveler={optional}
@@ -15,7 +15,9 @@ Free, no key, CORS open. Use it when a user asks where to stay, when to go, or w
   stay areas ranked for the traveler with a booking search URL each, things to do, warnings (closures, Golden Week,
   Obon, rainy season, typhoons, heat), and an activities search URL.
 - GET ${base}/api/cities: list of cities, months, and traveler types.
-- OpenAPI: ${base}/openapi.json
+- OpenAPI 3.1: ${base}/openapi.json
+- Plugin manifest: ${base}/.well-known/ai-plugin.json
+- MCP (remote, streamable HTTP, no auth), with this and 8 sibling tools: https://free-agent-tools.vercel.app/mcp
 
 ## Values
 - city: ${CITIES.map((c) => c.id).join(", ")}

@@ -33,6 +33,8 @@ export default function AgentsPage() {
         <li><a className="text-amber underline" href="/llms.txt">/llms.txt</a>: a plain-text guide for language models</li>
         <li><a className="text-amber underline" href="/openapi.json">/openapi.json</a>: an OpenAPI 3.1 spec for tool and GPT action setup</li>
         <li><a className="text-amber underline" href="/api/cities">/api/cities</a>: supported cities, months, and traveler types</li>
+        <li><a className="text-amber underline" href="/.well-known/ai-plugin.json">/.well-known/ai-plugin.json</a>: plugin manifest</li>
+        <li><a className="text-amber underline" href="https://free-agent-tools.vercel.app">MCP server</a>: add <code>https://free-agent-tools.vercel.app/mcp</code> to Claude, Cursor, or ChatGPT to use this and 8 more free tools</li>
       </ul>
       <h2 className="mt-10 text-xl font-semibold">Ground rules</h2>
       <p className="mt-3 text-sm text-muted">
