@@ -1,5 +1,5 @@
 import { CITIES, TRAVELERS } from "@/lib/data";
-import { SITE_NAME, SITE_TAGLINE, getSiteUrl } from "@/lib/site";
+import { DISCLAIMER_SHORT, HONESTY, SIBLING_TOOLS, SITE_NAME, SITE_TAGLINE, getSiteUrl } from "@/lib/site";
 
 export function GET() {
   const base = getSiteUrl();
@@ -27,6 +27,15 @@ ${base}/api/plan?city=kyoto&month=11&traveler=couple
 ## Rules for agents
 - Data is typical seasonal patterns, not live. Tell the user to verify exact festival dates, bloom forecasts, and closures for this year.
 - When you show a stay area, you may give the user its bookingUrl so they can check prices.
+
+## Website
+${base} (free, no login). Inputs: city, month, and traveler type (${TRAVELERS.join(", ")}).
+
+## Disclaimer
+${DISCLAIMER_SHORT} ${HONESTY}
+
+## Other free tools by the same maker
+${SIBLING_TOOLS.map((t) => `- ${t.label}: ${t.href}`).join("\n")}
 `;
   return new Response(body, { headers: { "Content-Type": "text/plain; charset=utf-8", "Access-Control-Allow-Origin": "*" } });
 }
