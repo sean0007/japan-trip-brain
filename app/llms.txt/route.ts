@@ -17,7 +17,7 @@ Free, no key, no signup, CORS open. GET query parameters or a POST JSON body wit
 - GET ${base}/api/cities: list of cities, months, and traveler types.
 - OpenAPI 3.1: ${base}/openapi.json
 - Plugin manifest: ${base}/.well-known/ai-plugin.json
-- MCP (remote, streamable HTTP, no auth), with this and 8 sibling tools: https://free-agent-tools.vercel.app/mcp
+- MCP (remote, streamable HTTP, no auth), with this and 9 sibling tools: https://free-agent-tools.vercel.app/mcp
 
 ## Values
 - city: ${CITIES.map((c) => c.id).join(", ")}

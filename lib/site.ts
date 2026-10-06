@@ -9,6 +9,7 @@ export const HONESTY =
   "Uses well-established seasonal patterns, not live data. Booking links may become affiliate links that support the site at no cost to you.";
 
 export const SIBLING_TOOLS = [
+  { href: "https://pitch-roast.vercel.app", label: "Pitch Roast" },
   { href: "https://fund-fix-flee.vercel.app", label: "Founder Scorecard" },
   { href: "https://hotel-ota-calculator.vercel.app", label: "Hotel OTA Calculator" },
   { href: "https://saas-bill-cutter.vercel.app", label: "SaaS Bill Cutter" },
