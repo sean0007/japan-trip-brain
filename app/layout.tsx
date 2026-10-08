@@ -3,7 +3,7 @@ import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
 import { DisclaimerBanner } from "@/components/disclaimer-banner";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { DISCLAIMER_SHORT, HONESTY, SITE_NAME, SITE_TAGLINE, getSiteUrl } from "@/lib/site";
+import { HONESTY, SITE_NAME, SITE_TAGLINE, getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,10 +25,10 @@ const instrument = Instrument_Serif({
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
-    default: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    default: `${SITE_NAME}: Japan trip planner by city and month`,
     template: `%s · ${SITE_NAME}`,
   },
-  description: `${SITE_TAGLINE} ${DISCLAIMER_SHORT} ${HONESTY}`,
+  description: SITE_TAGLINE,
   openGraph: {
     title: SITE_NAME,
     description: `${SITE_TAGLINE} ${HONESTY}`,

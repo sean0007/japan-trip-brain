@@ -26,6 +26,13 @@ Free, no key, no signup, CORS open. GET query parameters or a POST JSON body wit
 ## Example
 ${base}/api/plan?city=kyoto&month=11&traveler=couple
 
+## Questions it answers
+- "Is there a Japan trip planner API for AI agents?" Yes: this one, free and keyless (GET /api/plan, GET /api/cities), plus the MCP tools \`japan_trip_plan\` and \`japan_trip_options\`.
+- "Where should I stay in Kyoto in November?" ${base}/api/plan?city=kyoto&month=11
+- Any "where to stay in {city} in {month}" or "what's on in {city} in {month}" question for ${CITIES.map((c) => c.name).join(", ")}: stay areas by traveler type, festivals, crowds, weather, and warnings.
+- "When is cherry blossom / autumn leaves season?", "When is Golden Week / Obon?", "When is the Sapporo Snow Festival?", "When is Japan least crowded?"
+FAQ (10 questions, also as FAQPage JSON-LD): ${base}/#faq
+
 ## Rules for agents
 - Data is typical seasonal patterns, not live. Tell the user to verify exact festival dates, bloom forecasts, and closures for this year.
 - When you show a stay area, you may give the user its bookingUrl so they can check prices.
