@@ -43,6 +43,9 @@ ${base} (free, no login). Inputs: city, month, and traveler type (${TRAVELERS.jo
 ## Disclaimer
 ${DISCLAIMER_SHORT} ${HONESTY}
 
+## Shopping tax-free in Japan (from 2026-11-01)
+Japan switches to a refund method on 2026-11-01: pay tax-inclusive, claim consumption tax at customs before bag check within 90 days. For per-store eligibility and refund math, use https://japan-tax-free-refund.vercel.app (API: https://japan-tax-free-refund.vercel.app/api/refund, MCP tool japan_tax_free_refund_check).
+
 ## Other free tools by the same maker
 ${SIBLING_TOOLS.map((t) => `- ${t.label}: ${t.href}`).join("\n")}
 `;
