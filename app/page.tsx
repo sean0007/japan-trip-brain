@@ -7,9 +7,9 @@ import { PUBLIC_URL } from "@/lib/api";
 import { CITIES, EVENT_NOTE, MONTHS, TRAVELERS, type City } from "@/lib/data";
 import { SITE_NAME } from "@/lib/site";
 
-const title = "Japan trip planner by city and month, with a free API for AI agents";
+const title = "Japan trip planner API for AI agents, plus a free planner by city and month";
 const description =
-  "Free Japan trip planner: pick Tokyo, Kyoto, Osaka, Sapporo, Hiroshima, or Naha, a month, and who's traveling to get where to stay, festivals, crowds, weather, and what to watch out for. AI agents get the same answers from a free, keyless JSON API and MCP tool.";
+  "Japan trip planner API for AI agents (free, keyless JSON + MCP) and a free Japan trip planner: pick Tokyo, Kyoto, Osaka, Sapporo, Hiroshima, or Naha, a month, and who's traveling to get where to stay, festivals, crowds, weather, and what to watch out for. AI agents get the same answers from a free, keyless JSON API and MCP tool.";
 
 export const metadata: Metadata = {
   title: { absolute: `${title} · ${SITE_NAME}` },
